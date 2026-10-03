@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C++ машинаға бағытталған бағдарламалау</title>
+  <meta name="description" content="C++ машинаға бағытталған бағдарламалау — электронды оқу құралы">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <button id="menuBtn" class="plain-btn" title="Мазмұны">☰</button>
+      <div>
+        <div class="brand-title">C++ машинаға бағытталған бағдарламалау</div>
+        <div class="brand-sub">Электронды оқу құралы</div>
+      </div>
+    </div>
+    <div class="toolbar">
+      <label class="search"><span>⌕</span><input id="search" placeholder="Іздеу"></label>
+      <button id="prev" class="tool">‹</button>
+      <div id="counter" class="counter">1 / …</div>
+      <button id="next" class="tool">›</button>
+      <button id="zoomOut" class="tool">−</button>
+      <span id="zoomLabel">100%</span>
+      <button id="zoomIn" class="tool">+</button>
+      <button id="fit" class="tool">Сыйдыру</button>
+      <button id="theme" class="tool">Қараңғы</button>
+      <button id="full" class="tool">Толық экран</button>
+    </div>
+  </header>
+
+  <aside id="sidebar">
+    <div class="side-head">
+      <div><b>МАЗМҰНЫ</b><small>Электронды оқу құралы</small></div>
+      <button id="close" class="plain-btn">×</button>
+    </div>
+    <div class="side-body">
+      <button class="side-home" data-target="0">Басты бет</button>
+      <div id="tocSide"></div>
+      <div class="side-docs">
+        <a href="source/lectures.pdf" target="_blank" rel="noopener">Дәрістер жиынтығы — PDF</a>
+        <a href="source/labs.pdf" target="_blank" rel="noopener">Зертханалық жұмыстар — PDF</a>
+      </div>
+    </div>
+  </aside>
+  <div id="overlay"></div>
+
+  <main>
+    <div class="viewer">
+      <div id="pageWrap" class="page-wrap">
+        <div id="page" class="page"></div>
+        <div id="loading" class="loading"><span class="spinner"></span><span>Жүктелуде…</span></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <button id="prevBottom" class="nav">‹</button>
+    <div class="jump"><input id="pageInput" type="number" min="1"><span>/</span><b id="total">…</b><button id="go">Өту</button></div>
+    <button id="nextBottom" class="nav">›</button>
+    <div class="footer-actions"><button id="bottomToc">Мазмұны</button><button id="bottomFull">Толық экран</button></div>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="book-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

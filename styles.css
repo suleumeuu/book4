@@ -1,0 +1,33 @@
+:root{
+  --ui:#f3f4f6;--ui2:#ffffff;--line:#d7dbe0;--ink:#222;--muted:#667085;
+  --paper:#fff;--shadow:0 10px 35px rgba(0,0,0,.14);--accent:#1f4e79;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#e9eaec;color:var(--ink);font-family:"Times New Roman",Times,serif}
+button,input{font:inherit}
+body.dark{background:#202326;color:#eee}
+.app{min-height:100vh;display:flex;flex-direction:column}
+.topbar{height:64px;background:var(--ui2);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 18px;gap:18px;position:sticky;top:0;z-index:30;font-family:Arial,sans-serif}
+.brand{display:flex;align-items:center;gap:12px;min-width:260px}.brand-title{font-weight:600;font-size:16px}.brand-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.plain-btn,.tool{border:1px solid var(--line);background:#fff;color:#333;border-radius:5px;cursor:pointer}.plain-btn{width:34px;height:34px}.tool{height:34px;padding:0 9px}.toolbar{display:flex;align-items:center;gap:6px}.counter{min-width:72px;text-align:center;color:#555;font:13px Arial,sans-serif}.search{height:34px;width:210px;border:1px solid var(--line);border-radius:5px;display:flex;align-items:center;gap:6px;padding:0 9px;color:#777}.search input{width:100%;border:0;outline:0;background:transparent;font-family:Arial,sans-serif;font-size:13px}
+main{flex:1;overflow:auto;padding:28px 20px}.viewer{display:flex;justify-content:center;min-height:calc(100vh - 160px)}
+.page-wrap{position:relative;width:min(900px,92vw);padding:12px;background:#d4d6d9;border:1px solid #c3c6ca;box-shadow:var(--shadow)}
+.page{position:relative;width:100%;aspect-ratio:210/297;background:var(--paper);overflow:hidden;box-shadow:0 1px 5px rgba(0,0,0,.12)}
+.page canvas{display:block;width:100%;height:100%}
+.html-page{overflow:auto}
+.html-inner{min-height:100%;padding:2.4cm 2.2cm 2cm;color:#222;font-family:"Times New Roman",Times,serif;font-size:14pt;line-height:1.25;text-align:justify}
+.html-inner p{margin:0 0 12pt;text-indent:1.25cm}
+.html-inner h1{font-size:18pt;text-align:center;margin:0 0 22pt;line-height:1.25;font-weight:bold}
+.html-inner h2{font-size:16pt;margin:18pt 0 10pt;font-weight:bold}
+.cover-page{width:100%;height:100%;object-fit:cover;display:block}
+.title-page{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.title-page .title{font-size:24pt;font-weight:bold;line-height:1.25;margin:0 0 24pt}.title-page .sub{font-size:16pt}.title-page .city{margin-top:auto;font-size:14pt}
+.toc-page h1{text-align:center;margin-bottom:22pt}.toc-section{margin-bottom:18pt}.toc-section h2{font-size:16pt;border-bottom:1px solid #555;padding-bottom:5pt}.toc-row{display:flex;gap:8px;align-items:baseline;width:100%;padding:3px 0;cursor:pointer;font-size:14pt;line-height:1.25}.toc-row:hover{background:#f0f3f5}.toc-text{flex:0 1 auto}.dots{flex:1;border-bottom:1px dotted #555;min-width:20px;transform:translateY(-3px)}.toc-page-no{width:45px;text-align:right}
+.video-page h1{text-align:left}.video-card{display:block;border:1px solid #c8cdd3;padding:10px 12px;margin:9pt 0;text-decoration:none;color:#222}.video-card b{font-weight:bold}.video-card small{display:block;margin-top:3px;color:#666;font-size:11pt}.pdf-link{display:inline-block;margin-top:10pt;color:#1f4e79}
+.page-number{position:absolute;bottom:11px;left:50%;transform:translateX(-50%);font:11pt "Times New Roman",Times,serif;color:#333;background:rgba(255,255,255,.9)}
+.loading{position:absolute;inset:12px;background:#fff;display:flex;align-items:center;justify-content:center;gap:9px;font:14px Arial,sans-serif;color:#555;z-index:4}.spinner{width:20px;height:20px;border:2px solid #ddd;border-top-color:#1f4e79;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+footer{height:58px;background:var(--ui2);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:10px;position:sticky;bottom:0;z-index:20;font-family:Arial,sans-serif}.nav{width:38px;height:34px;border:1px solid var(--line);background:#fff;border-radius:5px;font-size:22px;cursor:pointer}.jump{display:flex;align-items:center;gap:6px;font-size:13px}.jump input{width:58px;height:30px;border:1px solid var(--line);border-radius:4px;text-align:center}.jump button,.footer-actions button{height:30px;border:1px solid var(--line);background:#fff;border-radius:4px;padding:0 9px;cursor:pointer}.footer-actions{position:absolute;right:18px;display:flex;gap:6px}
+#sidebar{position:fixed;z-index:60;left:0;top:0;bottom:0;width:360px;max-width:92vw;background:#fff;box-shadow:12px 0 35px rgba(0,0,0,.18);transform:translateX(-105%);transition:.2s; font-family:Arial,sans-serif}.side-head{height:64px;padding:0 15px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.side-head b{font-size:16px}.side-head small{display:block;font-size:11px;color:#777;margin-top:3px}.side-body{height:calc(100% - 64px);overflow:auto;padding:12px}.side-home,.side-link{width:100%;text-align:left;border:0;background:transparent;padding:7px 8px;cursor:pointer;border-radius:4px;font:13px/1.35 Arial,sans-serif;color:#333}.side-home:hover,.side-link:hover{background:#f0f2f4}.side-title{font:bold 12px Arial,sans-serif;margin:16px 5px 6px;color:#1f4e79}.side-docs{border-top:1px solid var(--line);margin-top:15px;padding-top:8px}.side-docs a{display:block;padding:7px 8px;color:#1f4e79;text-decoration:none;font:13px Arial,sans-serif}
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:55;display:none}#sidebar.open{transform:translateX(0)}#overlay.show{display:block}
+body.dark .topbar,body.dark footer,body.dark #sidebar{background:#2a2d30;color:#eee;border-color:#45494e}body.dark .tool,body.dark .plain-btn,body.dark footer button{background:#30343a;color:#eee;border-color:#4a4f55}body.dark .page-wrap{background:#3a3d40;border-color:#4a4f55}body.dark .page{background:#fff;color:#222}body.dark .search{border-color:#4a4f55}body.dark .search input{color:#eee}
+@media(max-width:900px){.toolbar .search{width:150px}.toolbar .tool:nth-of-type(n+7){display:none}.brand-sub{display:none}.footer-actions{display:none}.html-inner{padding:1.5cm 1.5cm 1.5cm}.page-wrap{width:96vw}}
